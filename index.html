@@ -6,6 +6,11 @@
 </head>
 <body>
     <ul id="cat-list"></ul>
+
+    <ul data-bind="foreach : catList">
+        <li data-bind="text: name, click : $parent.setCurrentCat($data)"></li>
+    </ul>
+
     <div id="cat" data-bind="with : currentCat">
 
         <h2 id="cat-name" data-bind="text : name"></h2>
